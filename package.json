@@ -1,0 +1,44 @@
+{
+  "name": "pinit",
+  "version": "1.0.0",
+  "description": "User can pin some messages without giving \"MANAGE_MESSAGES\" permission",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js",
+    "test": "nodemon --trace-warnings -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eve0415/ping-pong.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node.js",
+    "discord",
+    "discordjs",
+    "discord-bot"
+  ],
+  "author": "eve0415",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eve0415/ping-pong/issues"
+  },
+  "homepage": "https://github.com/eve0415/ping-pong#readme",
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "bufferutil": "^4.0.1",
+    "discord.js": "^12.2.0",
+    "erlpack": "github:discordapp/erlpack",
+    "log4js": "^6.3.0",
+    "pretty-ms": "^7.0.0",
+    "promisify": "0.0.3",
+    "utf-8-validate": "^5.0.2",
+    "zlib-sync": "^0.1.7",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
