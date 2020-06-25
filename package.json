@@ -26,19 +26,15 @@
   },
   "homepage": "https://github.com/eve0415/ping-pong#readme",
   "dependencies": {
-    "better-sqlite3": "^7.1.0",
     "bufferutil": "^4.0.1",
     "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
     "erlpack": "github:discordapp/erlpack",
-    "log4js": "^6.3.0",
-    "pretty-ms": "^7.0.0",
-    "promisify": "0.0.3",
     "utf-8-validate": "^5.0.2",
-    "zlib-sync": "^0.1.7",
-    "dotenv": "^8.2.0"
+    "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "eslint": "^7.3.0",
+    "eslint": "^7.3.1",
     "nodemon": "^2.0.4"
   }
 }
