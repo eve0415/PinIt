@@ -7,14 +7,14 @@
  メッセージを削除する権限をユーザーに与えたくないけど、メッセージのピン留めさせたい場合はこのbotを招待するだけで、実現できます。  
  PinItにはコマンドもありませんし、しゃべることもしません。
  
-## How To Use
+## How To Use - 使い方
  To pin a message, react with 📌`:pushpin:`  
  To unpin, react with ❌`:x:`  
  
  ピン留めする場合は、メッセージに 📌`:pushpin:` をリアクションしてください。  
  ピン留めを外す場合は、メッセージに ❌`:x:` をリアクションしてください。
  
-## But I don't want everyone to pin a message!
+## But I don't want everyone to pin a message! - ユーザー全員に使われたくない！
  Yes, I understand.  
  If you want to limit to people who has a certain role, simply give the same role to the bot.  
  
@@ -36,9 +36,18 @@
  `robot`または`bot`という単語のみを含む役職を無視するようにブラックリストを作成しました。 　
   したがって、PinItに`bot`の役職と他の役職を与えて、このボットの使用を制限することができます。
 
-## Invite
+## Invite - 招待
  [To invite click here. 自分のサーバーに招待したい場合は、ここをクリックしてください。](https://discord.com/api/oauth2/authorize?client_id=725287176748924968&permissions=73792&scope=bot)
 
+## Bugs and Feature Request
+ Any bugs report and feature requests are welcome!  
+ Please open an issue to notice me!  
+ Or, you can just ask me on Discord.  
+ 
+ バグの報告や新機能のリクエストは大歓迎です！  
+ GitHubのIssueで報告をするか、Discordで教えてください。  
+ できるだけ対応するつもりです。  
+ 
 ## LICENSE
 ```txt
 MIT License
