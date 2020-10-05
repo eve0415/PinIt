@@ -4,42 +4,40 @@ const client = new Client({ partials: ["MESSAGE", "REACTION"] });
 client.on("ready", () => console.log(`${client.user.tag} has logged in and is Ready!`));
 
 client.on("messageReactionAdd", async (reaction, user) => {
-	// ignore when PinIt react
+	// Ignore when PinIt react
 	if (user === client.user) return;
 	
-	// ignore when the reaction wasn't :pushpin: or :x:
+	// Ignore when the reaction wasn't :pushpin: or :x:
 	if (!(reaction.emoji.name === "📌" || reaction.emoji.name === "❌")) return;
 	
 	const data = await reaction.fetch();
 	
-	// ignore when the reaction event fired in DM
+	// Ignore when the reaction event fired in DM
 	if (!data.message.guild) return;
 	
 	const guild = data.message.guild;
 	const guildMember = data.message.guild.member(user.id);
 	
 	const roleID = new Array;
-	const blacklist = ["pinit", "@everyone", "bot", "robot"];
+	const blacklist = ["@everyone", "bot", "robot"];
 	
 	guild.me.roles.cache.forEach(role => {
+		if (role.managed) return;
 		if (blacklist.includes(role.name.toLowerCase())) return;
 		roleID.push(role.id);
 	});
 	
 	guildMember.roles.cache.forEach(role => {
 		if (roleID.length && roleID.includes(role.id) || !roleID.length) {
-			// treat with 📌
+			// Treat with 📌
 			if (reaction.emoji.name === "📌" && data.count === 1) {
 				reaction.remove();
 				data.message.pin();
 				data.message.react("❌");
 			}
 			
-			// treat with ❌
-			if (
-				(reaction.emoji.name === "❌" && data.me && data.count === 2)
-					|| (reaction.emoji.name === "❌" && !data.me && data.count === 1)
-			) {
+			// Treat with ❌
+			if (reaction.emoji.name === "❌" && data.message.pinned) {
 				reaction.remove();
 				data.message.unpin();
 			}
